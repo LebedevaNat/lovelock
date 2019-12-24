@@ -132,7 +132,7 @@ a:hover,a:focus{
  padding-top: 5px;
  text-transform: capitalize;
 }
-.form-horizontal .btn{
+.btn-default{
  width: 100%;
  background: #ff6969;
  padding: 10px 20px;
