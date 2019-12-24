@@ -1,15 +1,17 @@
 import React, {Component} from 'react';
-import {sendInputValue} from "../api/InputValues";
 import '../style/auth.css';
+import {sendInputValue} from "../api/InputValues";
 
 
 class Auth extends Component {
-    // clickHandler() {
-    //     const email = document.getElementById("email").value;
-    //     const password = document.getElementById("password").value;
-    //     sendInputValue(email, password);
-    // }
-
+    
+    clickHandler() {
+        const name = document.getElementById("name").value;
+        const surname = document.getElementById("surname").value;
+        const email = document.getElementById("email").value;
+        const password = document.getElementById("password").value;
+        sendInputValue(name, surname, email, password);
+    } 
     render() {
         return (
             <div class="container">
