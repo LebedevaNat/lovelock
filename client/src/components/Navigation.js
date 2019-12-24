@@ -16,6 +16,7 @@ function UserMenu() {
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
       <div class="btn-group-toggle" data-toggle="buttons">
         <a class="navbar-brand" href="/">Выход |</a>
+        <a class="navbar-brand" href="/LockList">Замки |</a>
         <a class="navbar-brand" href="/Start">Какая-то страница</a>
       </div>
     </nav>
@@ -28,6 +29,7 @@ function GuestMenu() {
       <div class="btn-group-toggle" data-toggle="buttons">
         <a class="navbar-brand" href="/Auth">Авторизация |</a>
         <a class="navbar-brand" href="/Register">Регистрация |</a>
+        <a class="navbar-brand" href="/LockList">Замки |</a>
         <a class="navbar-brand" href="/Start">Какая-то страница</a>
       </div>
     </nav>
@@ -35,9 +37,15 @@ function GuestMenu() {
 }
 
 class Navigation extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      loggedIn: props.isLoggedIn
+    };
+}
   render() {
     return (
-        <Menu/>
+        <Menu isLoggedIn = {this.props.isLoggedIn}/>
     );
   }
 }

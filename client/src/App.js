@@ -4,6 +4,7 @@ import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import Auth from './components/Auth';
 import Register from './components/Register';
 import Start from './components/Start';
+import LockList from './components/LockList';
 import './style/css/bootstrap.min.css';
 
 
@@ -12,7 +13,7 @@ class App extends Component {
     constructor(props) {
         super(props);
         this.state = {
-           isLoggedIn: false
+          isLoggedIn: true
         };
     }
 
@@ -20,7 +21,7 @@ class App extends Component {
         return (    
           <BrowserRouter>
             <div>
-              <Navigation />
+              <Navigation isLoggedIn = {this.state.isLoggedIn}/>
                 <Switch>
                 <Route
                     path='/'
@@ -39,6 +40,10 @@ class App extends Component {
                   <Route
                     path='/Start'
                     component={Start}
+                  />
+                  <Route
+                    path='/LockList'
+                    component={LockList}
                   />
                 </Switch>
             </div>
