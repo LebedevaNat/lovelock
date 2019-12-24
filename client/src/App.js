@@ -24,6 +24,7 @@ class App extends Component {
                 <Switch>
                 <Route
                     path='/'
+                    component={Start}
                     exact
                   />
                   <Route
