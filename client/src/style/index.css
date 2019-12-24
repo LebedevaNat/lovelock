@@ -205,3 +205,12 @@ td{
         margin-top: 10px;
     }
 }
+.start{
+    margin: 0px;
+    padding: 0px;
+    height: 80vh;
+    width: 75vw;
+    background-color: #faf8f2;
+    opacity: 0.9;
+    border-radius: 0px 0px 80px 0px;
+}
