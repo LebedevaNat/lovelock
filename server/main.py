@@ -9,7 +9,7 @@ app.config.from_object(__name__)
 
 CORS(app)
 
-cluster = MongoClient('mongodb+srv://atakhanova:Kate1245@cluster0-f05bv.mongodb.net/test?retryWrites=true&w=majority')
+cluster = MongoClient('mongodb+srv://atakhanova:Kate1245@cluster0-qp8rs.mongodb.net/test?retryWrites=true&w=majority')
 db = cluster['love_lock']
 values_collection = db['authorisation']
 
