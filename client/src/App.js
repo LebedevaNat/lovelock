@@ -5,7 +5,6 @@ import Auth from './components/Auth';
 import Register from './components/Register';
 import Start from './components/Start';
 import './style/css/bootstrap.min.css';
-import {sendInputValue} from "./api/InputValues";
 
 
 class App extends Component {
@@ -16,14 +15,6 @@ class App extends Component {
            isLoggedIn: false
         };
     }
-
-    clickHandler() {
-        const name = document.getElementById("name").value;
-        const surname = document.getElementById("surname").value;
-        const email = document.getElementById("email").value;
-        const password = document.getElementById("password").value;
-        sendInputValue(name, surname, email, password);
-    }   
 
     render() {
         return (    
